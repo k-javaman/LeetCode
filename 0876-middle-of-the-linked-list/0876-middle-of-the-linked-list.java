@@ -10,14 +10,14 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        ListNode a_pointer = head;
-        ListNode b_pointer = head;
-        
-        while(b_pointer != null && b_pointer.next !=null) {
-            a_pointer = a_pointer.next;
-            b_pointer = b_pointer.next.next;
+        //Pointers will reference the first node
+        ListNode slow_pointer = head;
+        ListNode fast_pointer = head;
+
+        while(fast_pointer != null && fast_pointer.next !=null) {
+            slow_pointer = slow_pointer.next;
+            fast_pointer = fast_pointer.next.next;
         }
-        
-        return a_pointer;
+        return slow_pointer;
     }
 }
