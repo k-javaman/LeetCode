@@ -10,3 +10,6 @@ class Solution:
         return # If no pair of numbers is found that adds up to 'target', return None
     
     #Not solved yet
+    # TIL
+    # prevMap = {} : how to create a map in python
+    # prevMap[n] = i : add index 'i' with value [n] in map in python
