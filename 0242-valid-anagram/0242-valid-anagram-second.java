@@ -22,3 +22,6 @@ public class Solution {
         return true;
     }
 }
+
+//Runtime: 3 ms, faster than 89.31% of Java online submissions for Valid Anagram.
+//Memory Usage: 42.9 MB, less than 40.03% of Java online submissions for Valid Anagram.
