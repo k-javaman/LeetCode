@@ -1,18 +1,9 @@
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
-        pair = [[p, s] for p, s in zip(position, speed)] #List Comprehension
-
-        stack = [] # How many car fleets we have at the end
-        for p, s in sorted(pair)[::-1]: # Reverse Sorted Order
-            stack.append((target - p) / s)
-            # Does it overlap with the other one on the top of the stack
-            # 2 is the condition to make collide
-            # to append the value and compare, we use if statement not while
-            if len(stack) >= 2 and stack[-1] <= stack[-2]:
-                stack.pop()
-
-        return len(stack)
-
-# using position and time to calculate the time to distance value!
-# List Comprehension and Reverse Sorted Order
-# Start from right(closest to destination) to left not to check two speed conditions
+        ans = prev = 0
+        for pp, ss in sorted(zip(position, speed), reverse=True):
+            tt = (target - pp)/ss # time to arrive at target 
+            if  prev < tt:
+                ans += 1
+                prev = tt
+        return ans 
