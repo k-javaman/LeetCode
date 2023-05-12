@@ -8,7 +8,7 @@ class Solution:
             # Does it overlap with the other one on the top of the stack
             # 2 is the condition to make collide
             # to append the value and compare, we use if statement not while
-            while len(stack) >= 2 and stack[-1] <= stack[-2]:
+            if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 stack.pop()
 
         return len(stack)
