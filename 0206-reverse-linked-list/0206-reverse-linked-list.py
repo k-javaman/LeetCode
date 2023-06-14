@@ -12,8 +12,8 @@ class Solution:
                 nxt = cur.next
                 cur.next = prev
                 return recursive(nxt, cur)
-            
         return recursive(head, None)
+        
             
         
             
