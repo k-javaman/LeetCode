@@ -14,4 +14,5 @@ class Solution:
             return True
         if root and subRoot and root.val == subRoot.val:
             return self.sameTree(root.left, subRoot.left) and self.sameTree(root.right, subRoot.right)
-        return False
+        else :
+            return False
