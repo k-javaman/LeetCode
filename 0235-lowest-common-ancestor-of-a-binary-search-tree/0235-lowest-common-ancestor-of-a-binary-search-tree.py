@@ -5,11 +5,7 @@
 #         self.left = None
 #         self.right = None
 
-# This class represents a solution for finding the lowest common ancestor in a binary search tree
-# This class represents a solution for finding the lowest common ancestor in a binary search tree
 class Solution:
-    # The method lowestCommonAncestor receives a root node and two other nodes p and q and finds their
-    # lowest common ancestor in the binary search tree
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
        cur = root
        
