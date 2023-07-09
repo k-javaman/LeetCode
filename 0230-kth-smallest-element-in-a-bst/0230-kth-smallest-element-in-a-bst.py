@@ -11,7 +11,7 @@ class Solution:
         stack = []
         cur = root
         
-        while cur or root:
+        while cur or stack:
             while cur:
                 stack.append(cur)
                 cur = cur.left
