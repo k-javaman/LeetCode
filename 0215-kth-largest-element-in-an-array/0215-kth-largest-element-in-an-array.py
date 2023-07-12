@@ -3,6 +3,5 @@ class Solution:
         heapq.heapify(nums)
         while len(nums) >= k:
             res = heapq.heappop(nums)
-        
         return res
         
